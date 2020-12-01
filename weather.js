@@ -1,4 +1,8 @@
-var cityName = "Boston";
+var citySearch = document.getElementById("search-btn");
+citySearch.addEventListener('click', function() {
+var cityCapture = $("#City").val();
+
+var cityName = cityCapture;
 var apiKey = "faa7b7b84dfcd508f70fb1a0655d7b85";
 var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`
 $.ajax({
@@ -18,4 +22,5 @@ $.ajax({
   $("#weather_card").html(cardTemplate)
   });
 
+} )
   
